@@ -8,7 +8,13 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // ✅ Ye sabse pehle hona chahiye
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://i-note-book-seven.vercel.app", // ✅ only allow your frontend
+  })
+);
+
 app.options("*", cors()); // Preflight requests ke liye
 
 // Middleware
