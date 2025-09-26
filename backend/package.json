@@ -1,9 +1,11 @@
 {
   "name": "inotebook-backend",
   "version": "1.0.0",
-  "description": "inotrbook-Your notebook on the cloud",
+  "description": "INoteBook - Your notebook on the cloud",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,8 +16,7 @@
     "express": "^5.1.0",
     "express-validator": "^7.2.1",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.18.1",
-    "react-icons": "^5.5.0"
+    "mongoose": "^8.18.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
