@@ -6,10 +6,10 @@ connectToMongo();
 
 const app = express();
 
-// ✅ CORS setup
+// ✅ CORS fix
 app.use(
   cors({
-    origin: "https://i-note-book-seven.vercel.app", // Vercel frontend domain
+    origin: ["http://localhost:3000", "https://i-note-book-seven.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
@@ -17,7 +17,7 @@ app.use(
 
 app.use(express.json());
 
-// Available Routes
+// Routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
 
