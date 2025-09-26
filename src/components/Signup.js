@@ -22,13 +22,16 @@ const Signup = () => {
       return;
     }
 
-    const response = await fetch("http://localhost:5000/api/auth/", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify({ name, email, password }),
-    });
+    const response = await fetch(
+      "https://inotebook-production-b4d6.up.railway.app",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ name, email, password }),
+      }
+    );
 
     const json = await response.json();
     console.log(json);

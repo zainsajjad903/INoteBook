@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "react-toastify";
 
 const NoteState = (props) => {
-  const host = "http://localhost:5000";
+  const host = "https://inotebook-production-b4d6.up.railway.app";
   const [notes, setNotes] = useState([]);
 
   // Fetch all notes
